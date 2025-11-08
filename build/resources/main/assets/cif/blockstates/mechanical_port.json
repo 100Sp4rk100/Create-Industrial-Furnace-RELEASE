@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "cif:block/mechanical_port"
+    }
+  }
+}

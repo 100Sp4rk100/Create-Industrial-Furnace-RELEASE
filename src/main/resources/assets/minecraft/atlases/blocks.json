@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "type": "single",
+      "resource": "cif:fluid/hot_water_still"
+    },
+    {
+      "type": "single",
+      "resource": "cif:fluid/hot_water_flow"
+    },
+    {
+      "type": "single",
+      "resource": "cif:fluid/fuel_still"
+    },
+    {
+      "type": "single",
+      "resource": "cif:fluid/fuel_flow"
+    }
+  ]
+}

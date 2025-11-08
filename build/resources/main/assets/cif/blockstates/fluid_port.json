@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "cif:block/fluid_port" },
+    "facing=south": { "model": "cif:block/fluid_port", "y": 180 },
+    "facing=east":  { "model": "cif:block/fluid_port", "y": 90 },
+    "facing=west":  { "model": "cif:block/fluid_port", "y": 270 },
+    "facing=up":    { "model": "cif:block/fluid_port", "x": 270 },
+    "facing=down":  { "model": "cif:block/fluid_port", "x": 90 }
+  }
+}

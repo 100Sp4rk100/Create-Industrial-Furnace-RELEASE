@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 3 ",
+    "515",
+    "444"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:blast_furnace"
+    },
+    "3": {
+      "item": "create:smart_chute"
+    },
+    "4": {
+      "item": "cif:diamond_alloy_block"
+    },
+    "5": {
+      "item": "minecraft:chest"
+    }
+  },
+  "result": {
+    "item": "cif:furnace_block",
+    "count": 2
+  }
+}

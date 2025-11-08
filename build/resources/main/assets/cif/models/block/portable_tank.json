@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "down": "cif:block/portable_tank_up",
+    "up": "cif:block/portable_tank_up",
+    "north": "cif:block/portable_tank",
+    "south": "cif:block/portable_tank",
+    "west": "cif:block/portable_tank",
+    "east": "cif:block/portable_tank",
+    "particle": "cif:block/diamond_alloy_block"
+  }
+}

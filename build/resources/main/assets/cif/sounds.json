@@ -1,0 +1,46 @@
+{
+  "smelt_end": {
+    "subtitle": "cif:subtitle.smelt_end",
+    "sounds": [
+      {
+        "name": "cif:smelt_end",
+        "volume": 5.0
+      }
+    ]
+  },
+  "alert_explosion": {
+    "subtitle": "cif:subtitle.alert_explosion",
+    "sounds": [
+      {
+        "name": "cif:alert_explosion",
+        "volume": 1.0,
+        "stream": true,
+        "attenuation_distance": 16
+      }
+    ]
+  },
+  "music_one": {
+    "sounds": [
+      {
+        "name": "cif:music_one",
+        "stream": true
+      }
+    ]
+  },
+  "music_two": {
+  "sounds": [
+    {
+      "name": "cif:music_two",
+      "stream": true
+    }
+  ]
+},
+  "music_three": {
+  "sounds": [
+    {
+      "name": "cif:music_three",
+      "stream": true
+    }
+  ]
+}
+}

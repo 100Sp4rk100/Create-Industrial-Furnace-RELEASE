@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "cif:block/furnace_block" },
+    "facing=south": { "model": "cif:block/furnace_block", "y": 180 },
+    "facing=east": { "model": "cif:block/furnace_block", "y": 90 },
+    "facing=west": { "model": "cif:block/furnace_block", "y": 270 },
+    "facing=up":    { "model": "cif:block/furnace_block", "x": 270, "y": 270 },
+    "facing=down":  { "model": "cif:block/furnace_block", "x": 90, "y": 90 }
+  }
+}

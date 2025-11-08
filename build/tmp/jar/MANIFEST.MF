@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Specification-Title: cif
+Specification-Vendor: 100Sp4rk100
+Specification-Version: 1
+Implementation-Title: cif
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor: 100Sp4rk100
+Implementation-Timestamp: 2025-11-08T12:03:50+0100
+MixinConfigs: cif.mixins.json
+

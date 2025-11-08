@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "cif:block/diamond_alloy_block",
+    "up": "cif:block/industrial_furnace/if_mechanical_port",
+    "north": "cif:block/diamond_alloy_block",
+    "south": "cif:block/diamond_alloy_block",
+    "west": "cif:block/diamond_alloy_block",
+    "east": "cif:block/diamond_alloy_block",
+    "particle": "cif:block/diamond_alloy_block"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 3 ",
+    "515",
+    "424"
+  ],
+  "key": {
+    "1": {
+      "item": "create:precision_mechanism"
+    },
+    "2": {
+      "item": "create:smart_fluid_pipe"
+    },
+    "3": {
+      "item": "create:mechanical_pump"
+    },
+    "4": {
+      "item": "cif:diamond_alloy_block"
+    },
+    "5": {
+      "item": "create:fluid_tank"
+    }
+  },
+  "result": {
+    "item": "cif:fluid_port",
+    "count": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "cif:block/control_panel" },
+    "facing=south": { "model": "cif:block/control_panel", "y": 180 },
+    "facing=east":  { "model": "cif:block/control_panel", "y": 90 },
+    "facing=west":  { "model": "cif:block/control_panel", "y": 270 },
+    "facing=up":    { "model": "cif:block/control_panel", "x": 270 },
+    "facing=down":  { "model": "cif:block/control_panel", "x": 90 }
+  }
+}

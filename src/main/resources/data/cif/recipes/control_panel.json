@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "212",
+    "   "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:item_frame"
+    },
+    "2": {
+      "item": "cif:alloynium_block"
+    }
+
+  },
+  "result": {
+    "item": "cif:control_panel",
+    "count": 4
+  }
+}

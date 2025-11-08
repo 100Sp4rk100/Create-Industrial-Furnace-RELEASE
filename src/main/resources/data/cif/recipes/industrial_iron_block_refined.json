@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create:industrial_iron_block"
+        },
+        {
+          "amount": 1000,
+          "fluid": "minecraft:lava",
+          "nbt": {}
+        }
+      ],
+      "results": [
+        {
+          "item": "cif:industrial_iron_block_refined"
+        }
+      ]
+}

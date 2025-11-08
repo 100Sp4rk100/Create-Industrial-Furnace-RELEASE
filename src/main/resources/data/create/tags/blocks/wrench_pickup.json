@@ -1,0 +1,14 @@
+{
+  "values": [
+    "cif:industrial_iron_block_refined",
+    "cif:diamond_alloy_block",
+    "cif:fluid_port",
+    "cif:furnace_block",
+    "cif:controller_block",
+    "cif:portable_tank",
+    "cif:chemical_cleaner",
+    "cif:alloynium_block",
+    "cif:advanced_portable_tank",
+    "cif:control_panel"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "cif:music_disc_one",
+    "cif:music_disc_two",
+    "cif:music_disc_three"
+  ]
+}

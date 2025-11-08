@@ -1,0 +1,6 @@
+{
+  "effects": "burning",
+  "exhaustion": 5.0,
+  "message_id": "cif.fuel",
+  "scaling": "when_caused_by_living_non_player"
+}

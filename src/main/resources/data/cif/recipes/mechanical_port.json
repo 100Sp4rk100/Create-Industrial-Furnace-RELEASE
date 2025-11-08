@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 3 ",
+    "212",
+    "454"
+  ],
+  "key": {
+    "1": {
+      "item": "create:precision_mechanism"
+    },
+    "2": {
+      "item": "create:cogwheel"
+    },
+    "3": {
+      "item": "create:shaft"
+    },
+    "4": {
+      "item": "cif:diamond_alloy_block"
+    },
+    "5": {
+      "item": "create:large_cogwheel"
+    }
+  },
+  "result": {
+    "item": "cif:mechanical_port",
+    "count": 1
+  }
+}
