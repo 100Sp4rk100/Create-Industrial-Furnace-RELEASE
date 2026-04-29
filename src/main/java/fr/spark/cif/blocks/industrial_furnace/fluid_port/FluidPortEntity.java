@@ -1,10 +1,10 @@
 package fr.spark.cif.blocks.industrial_furnace.fluid_port;
 
-import com.simibubi.create.api.equipment.goggles.IHaveGoggleInformation;
+import com.simibubi.create.content.equipment.goggles.IHaveGoggleInformation;
 import com.simibubi.create.foundation.blockEntity.SmartBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
 import com.simibubi.create.foundation.blockEntity.behaviour.fluid.SmartFluidTankBehaviour;
-import com.simibubi.create.foundation.utility.CreateLang;
+import com.simibubi.create.foundation.utility.Lang;
 import fr.spark.cif.Cif;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -38,7 +38,7 @@ public class FluidPortEntity extends SmartBlockEntity implements IHaveGoggleInfo
         super(typeIn, pos, state);
 
         this.block_Type = FUEL_TYPE;
-        this.fluidContent = CreateLang.builder(Cif.MODID).translate("gui.goggles.fluid_port.NoContent").style(ChatFormatting.AQUA).component();
+        this.fluidContent = Lang.builder(Cif.MODID).translate("gui.goggles.fluid_port.NoContent").style(ChatFormatting.AQUA).component();
         this.CURRENT_FLUID_NAME = "Air";
         this.autoriseFluid();
         this.updateInternal();
@@ -63,7 +63,7 @@ public class FluidPortEntity extends SmartBlockEntity implements IHaveGoggleInfo
         super.tick();
         autoriseFluid();
         updateInternal();
-        CURRENT_FLUID_NAME = CreateLang.fluidName(tank.getPrimaryHandler().getFluidInTank(0)).string();
+        CURRENT_FLUID_NAME = Lang.fluidName(tank.getPrimaryHandler().getFluidInTank(0)).string();
     }
 
     @Override
@@ -89,33 +89,33 @@ public class FluidPortEntity extends SmartBlockEntity implements IHaveGoggleInfo
     }
 
     private String getBlock_Type() {
-        if (block_Type.equals(FUEL_TYPE)) return CreateLang.builder(Cif.MODID).translate("gui.goggles.fluid_port.type.fuel").string();
-        else if (block_Type.equals(WATER_TYPE)) return CreateLang.builder(Cif.MODID).translate("gui.goggles.fluid_port.type.water").string();
-        else return CreateLang.builder(Cif.MODID).translate("gui.goggles.fluid_port.type.out").string();
+        if (block_Type.equals(FUEL_TYPE)) return Lang.builder(Cif.MODID).translate("gui.goggles.fluid_port.type.fuel").string();
+        else if (block_Type.equals(WATER_TYPE)) return Lang.builder(Cif.MODID).translate("gui.goggles.fluid_port.type.water").string();
+        else return Lang.builder(Cif.MODID).translate("gui.goggles.fluid_port.type.out").string();
     }
 
     @Override
     public boolean addToGoggleTooltip(List<Component> tooltip, boolean isPlayerSneaking) {
-        CreateLang.builder(Cif.MODID)
+        Lang.builder(Cif.MODID)
                 .translate("gui.goggles.fluid_port.type")
                 .style(ChatFormatting.GOLD)
-                .add(CreateLang.text(getBlock_Type()).style(ChatFormatting.AQUA))
+                .add(Lang.text(getBlock_Type()).style(ChatFormatting.AQUA))
                 .forGoggles(tooltip);
 
-        CreateLang.builder(Cif.MODID)
+        Lang.builder(Cif.MODID)
                 .translate("gui.goggles.fluid_port.content")
                 .style(ChatFormatting.GREEN)
                 .add(fluidContent)
                 .forGoggles(tooltip);
 
-        CreateLang.number(tank.getPrimaryHandler().getFluidInTank(0).getAmount()).style(ChatFormatting.AQUA)
-                .add(CreateLang.text("mb")).style(ChatFormatting.YELLOW)
-                .add(CreateLang.text("/ ").style(ChatFormatting.DARK_GRAY))
-                .add(CreateLang.number(capacity).style(ChatFormatting.BLUE))
-                .add(CreateLang.text("mb").style(ChatFormatting.BLUE))
+        Lang.number(tank.getPrimaryHandler().getFluidInTank(0).getAmount()).style(ChatFormatting.AQUA)
+                .add(Lang.text("mb")).style(ChatFormatting.YELLOW)
+                .add(Lang.text("/ ").style(ChatFormatting.DARK_GRAY))
+                .add(Lang.number(capacity).style(ChatFormatting.BLUE))
+                .add(Lang.text("mb").style(ChatFormatting.BLUE))
                 .forGoggles(tooltip);
 
-        CreateLang.text(CURRENT_FLUID_NAME).forGoggles(tooltip);
+        Lang.text(CURRENT_FLUID_NAME).forGoggles(tooltip);
 
         return isPlayerSneaking;
     }
@@ -141,11 +141,11 @@ public class FluidPortEntity extends SmartBlockEntity implements IHaveGoggleInfo
     private void updateInternal() {
         FluidStack fluidStack = tank.getPrimaryHandler().getFluidInTank(0);
         if (!fluidStack.isEmpty()) {
-            fluidContent = CreateLang.fluidName(fluidStack)
+            fluidContent = Lang.fluidName(fluidStack)
                     .style(ChatFormatting.AQUA)
                     .component();
         } else {
-            fluidContent = CreateLang.builder(Cif.MODID)
+            fluidContent = Lang.builder(Cif.MODID)
                     .translate("gui.goggles.fluid_port.NoContent")
                     .style(ChatFormatting.AQUA)
                     .component();

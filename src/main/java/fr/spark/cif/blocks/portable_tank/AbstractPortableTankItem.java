@@ -1,6 +1,6 @@
 package fr.spark.cif.blocks.portable_tank;
 
-import com.simibubi.create.foundation.utility.CreateLang;
+import com.simibubi.create.foundation.utility.Lang;
 import fr.spark.cif.Cif;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
@@ -56,8 +56,8 @@ public abstract class AbstractPortableTankItem extends BlockItem {
 
             if (!fluid.isEmpty()) {
 
-                tooltipComponents.add(CreateLang.builder(Cif.MODID).translate("gui.goggles.portable_tank.name").component().withStyle(ChatFormatting.AQUA));
-                tooltipComponents.add(CreateLang.fluidName(fluid).component());
+                tooltipComponents.add(Lang.builder(Cif.MODID).translate("gui.goggles.portable_tank.name").component().withStyle(ChatFormatting.AQUA));
+                tooltipComponents.add(Lang.fluidName(fluid).component());
 
                 ChatFormatting color;
                 int space = getCapacity() - fluid.getAmount();
@@ -72,7 +72,7 @@ public abstract class AbstractPortableTankItem extends BlockItem {
                     color =  ChatFormatting.RED;
                 }
 
-                tooltipComponents.add(CreateLang.text(fluid.getAmount() + "/ " + getCapacity() + "mb").component().withStyle(color));
+                tooltipComponents.add(Lang.text(fluid.getAmount() + "/ " + getCapacity() + "mb").component().withStyle(color));
             }
         }
     }

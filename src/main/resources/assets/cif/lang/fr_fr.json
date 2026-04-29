@@ -71,6 +71,11 @@
   "cif.gui.goggles.chemical_cleaner.input": "Entrée : ",
   "cif.gui.goggles.chemical_cleaner.output": "Sortie : ",
 
+  "cif.gui.goggles.control_panel.mod_txt": "Vue courrante : ",
+  "cif.gui.goggles.control_panel.mod_input": "Vue d'entrée",
+  "cif.gui.goggles.control_panel.mod_output": "Vue de sortie",
+  "cif.gui.goggles.control_panel.mod_nothing": "Rien",
+
   "cif.ponder.cif_furnace_ponder_build.header": "Construire le Four Industriel",
   "cif.ponder.cif_furnace_ponder_build.text_1": "Le four industriel est une structure de 3x3x3 blocs",
   "cif.ponder.cif_furnace_ponder_build.text_2": "En bas, 6 ports de fluide",

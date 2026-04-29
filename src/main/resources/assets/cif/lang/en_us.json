@@ -71,6 +71,11 @@
   "cif.gui.goggles.chemical_cleaner.input": "Input : ",
   "cif.gui.goggles.chemical_cleaner.output": "Output : ",
 
+  "cif.gui.goggles.control_panel.mod_txt": "Current Mod : ",
+  "cif.gui.goggles.control_panel.mod_input": "Input view",
+  "cif.gui.goggles.control_panel.mod_output": "Output view",
+  "cif.gui.goggles.control_panel.mod_nothing": "Nothing",
+
   "cif.ponder.cif_furnace_ponder_build.header": "Build the Industrial Furnace",
   "cif.ponder.cif_furnace_ponder_build.text_1": "The industrial furnace is a 3x3x3 block structure",
   "cif.ponder.cif_furnace_ponder_build.text_2": "At the bottom, 6 fluid ports",

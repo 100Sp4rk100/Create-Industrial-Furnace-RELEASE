@@ -1,10 +1,10 @@
 package fr.spark.cif.blocks.industrial_furnace.furnace;
 
 import com.simibubi.create.AllItems;
-import com.simibubi.create.api.equipment.goggles.IHaveGoggleInformation;
+import com.simibubi.create.content.equipment.goggles.IHaveGoggleInformation;
 import com.simibubi.create.foundation.blockEntity.SmartBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
-import com.simibubi.create.foundation.utility.CreateLang;
+import com.simibubi.create.foundation.utility.Lang;
 import fr.spark.cif.Cif;
 import fr.spark.cif.blocks.industrial_furnace.controller.ControllerEntity;
 import net.minecraft.ChatFormatting;
@@ -87,20 +87,20 @@ public class FurnaceEntity extends SmartBlockEntity implements IHaveGoggleInform
             if(controller.checkStructure()){
 
                 if (!controller.on){
-                    CreateLang.builder(Cif.MODID)
+                    Lang.builder(Cif.MODID)
                             .translate("gui.goggles.furnace.of")
                             .style(ChatFormatting.DARK_RED)
                             .forGoggles(tooltip);
 
                 }else if (!controller.isHot){
-                    CreateLang.builder(Cif.MODID)
+                    Lang.builder(Cif.MODID)
                             .translate("gui.goggles.furnace.preheating")
                             .style(ChatFormatting.DARK_RED)
                             .forGoggles(tooltip);
                 }
 
                 if (controller.explode){
-                    CreateLang.builder(Cif.MODID)
+                    Lang.builder(Cif.MODID)
                             .translate("gui.goggles.furnace.explosion")
                             .style(ChatFormatting.DARK_RED)
                             .forGoggles(tooltip);
@@ -113,7 +113,7 @@ public class FurnaceEntity extends SmartBlockEntity implements IHaveGoggleInform
                 setCurrentViewModGoggle(tooltip);
 
                 if (debugMod == 1 || (debugMod == 3 && all)){
-                    CreateLang.builder(Cif.MODID)
+                    Lang.builder(Cif.MODID)
                             .translate("gui.goggles.furnace.slots")
                             .style(ChatFormatting.GOLD)
                             .forGoggles(tooltip);
@@ -132,7 +132,7 @@ public class FurnaceEntity extends SmartBlockEntity implements IHaveGoggleInform
 
                 }
                 if (debugMod == 2 || (debugMod == 3 && !all)){
-                    CreateLang.builder(Cif.MODID)
+                    Lang.builder(Cif.MODID)
                             .translate("gui.goggles.furnace.tocheck")
                             .style(ChatFormatting.GOLD)
                             .forGoggles(tooltip);
@@ -149,7 +149,7 @@ public class FurnaceEntity extends SmartBlockEntity implements IHaveGoggleInform
                 }
 
             }else {
-                CreateLang.builder(Cif.MODID)
+                Lang.builder(Cif.MODID)
                         .translate("gui.goggles.furnace.invalid")
                         .style(ChatFormatting.DARK_RED)
                         .forGoggles(tooltip);
@@ -172,7 +172,7 @@ public class FurnaceEntity extends SmartBlockEntity implements IHaveGoggleInform
     }
 
     private void addNotAll(String langKey, List<Component> toolip, boolean bool){
-        CreateLang.builder(Cif.MODID)
+        Lang.builder(Cif.MODID)
                 .translate(langKey)
                 .style(notAllColor(bool))
                 .forGoggles(toolip);
@@ -186,23 +186,23 @@ public class FurnaceEntity extends SmartBlockEntity implements IHaveGoggleInform
     }
 
     private void addGoggleInfoINP(ControllerEntity controller, List<Component> tooltip, Integer index, ItemStack stack, int ticks){
-        CreateLang.text(index + " -> ")
+        Lang.text(index + " -> ")
                 .style(ChatFormatting.AQUA)
-                .add(CreateLang.itemName(stack)
+                .add(Lang.itemName(stack)
                         .style(ChatFormatting.GREEN))
-                .add(CreateLang.text("(x"+stack.getCount()+")").style(ChatFormatting.RED))
+                .add(Lang.text("(x"+stack.getCount()+")").style(ChatFormatting.RED))
                 .forGoggles(tooltip);
 
     }
 
     private void addGoggleInfoOUT(ControllerEntity controller, List<Component> tooltip, ItemStack stack){
-        CreateLang.builder(Cif.MODID)
+        Lang.builder(Cif.MODID)
                 .translate("gui.goggles.furnace.slots.out")
                 .style(ChatFormatting.GOLD)
                 .forGoggles(tooltip);
 
-        CreateLang.itemName(stack).style(ChatFormatting.GREEN)
-                .add(CreateLang.text("(x"+stack.getCount()+")").style(ChatFormatting.RED))
+        Lang.itemName(stack).style(ChatFormatting.GREEN)
+                .add(Lang.text("(x"+stack.getCount()+")").style(ChatFormatting.RED))
                 .forGoggles(tooltip);
     }
 
@@ -215,10 +215,10 @@ public class FurnaceEntity extends SmartBlockEntity implements IHaveGoggleInform
             case 3 -> key = "gui.goggles.furnace.mod.automatic";
         }
 
-        CreateLang.builder(Cif.MODID)
+        Lang.builder(Cif.MODID)
                 .translate("gui.goggles.furnace.mod")
                 .style(ChatFormatting.DARK_PURPLE)
-                .add(CreateLang.builder(Cif.MODID).translate(key)
+                .add(Lang.builder(Cif.MODID).translate(key)
                         .style(ChatFormatting.LIGHT_PURPLE))
                 .forGoggles(tooltip);
     }

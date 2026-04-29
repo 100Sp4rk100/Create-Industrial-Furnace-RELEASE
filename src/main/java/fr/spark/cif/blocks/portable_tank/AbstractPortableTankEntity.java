@@ -1,10 +1,10 @@
 package fr.spark.cif.blocks.portable_tank;
 
-import com.simibubi.create.api.equipment.goggles.IHaveGoggleInformation;
+import com.simibubi.create.content.equipment.goggles.IHaveGoggleInformation;
 import com.simibubi.create.foundation.blockEntity.SmartBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
 import com.simibubi.create.foundation.blockEntity.behaviour.fluid.SmartFluidTankBehaviour;
-import com.simibubi.create.foundation.utility.CreateLang;
+import com.simibubi.create.foundation.utility.Lang;
 import fr.spark.cif.Cif;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -70,8 +70,8 @@ public abstract class AbstractPortableTankEntity extends SmartBlockEntity implem
 
     @Override
     public boolean addToGoggleTooltip(List<Component> tooltip, boolean isPlayerSneaking) {
-        CreateLang.builder(Cif.MODID).translate("gui.goggles.portable_tank.name").style(ChatFormatting.AQUA).forGoggles(tooltip);
-        CreateLang.fluidName(tank.getPrimaryHandler().getFluidInTank(0)).forGoggles(tooltip);
+        Lang.builder(Cif.MODID).translate("gui.goggles.portable_tank.name").style(ChatFormatting.AQUA).forGoggles(tooltip);
+        Lang.fluidName(tank.getPrimaryHandler().getFluidInTank(0)).forGoggles(tooltip);
         
         ChatFormatting color;
         if (tank.getPrimaryHandler().getSpace() != 0){
@@ -83,8 +83,8 @@ public abstract class AbstractPortableTankEntity extends SmartBlockEntity implem
         }else {
             color =  ChatFormatting.RED;
         }
-        
-        CreateLang.text(tank.getPrimaryHandler().getFluidInTank(0).getAmount() + "/ " + getCapacity() + "mb").style(color).forGoggles(tooltip);
+
+        Lang.text(tank.getPrimaryHandler().getFluidInTank(0).getAmount() + "/ " + getCapacity() + "mb").style(color).forGoggles(tooltip);
         return isPlayerSneaking;
     }
 

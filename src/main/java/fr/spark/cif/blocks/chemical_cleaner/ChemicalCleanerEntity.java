@@ -1,11 +1,11 @@
 package fr.spark.cif.blocks.chemical_cleaner;
 
-import com.simibubi.create.api.equipment.goggles.IHaveGoggleInformation;
+import com.simibubi.create.content.equipment.goggles.IHaveGoggleInformation;
 import com.simibubi.create.foundation.blockEntity.SmartBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BehaviourType;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
 import com.simibubi.create.foundation.blockEntity.behaviour.fluid.SmartFluidTankBehaviour;
-import com.simibubi.create.foundation.utility.CreateLang;
+import com.simibubi.create.foundation.utility.Lang;
 import fr.spark.cif.init.CIF_fluids_Register;
 import fr.spark.cif.Cif;
 import fr.spark.cif.init.CIF_items_Register;
@@ -175,17 +175,17 @@ public class ChemicalCleanerEntity extends SmartBlockEntity implements IHaveGogg
     @Override
     public boolean addToGoggleTooltip(List<Component> tooltip, boolean isPlayerSneaking) {
 
-        CreateLang.itemName(current).style(ChatFormatting.GOLD)
-                .add(CreateLang.text(" x" + current.getCount()).style(ChatFormatting.YELLOW))
+        Lang.itemName(current).style(ChatFormatting.GOLD)
+                .add(Lang.text(" x" + current.getCount()).style(ChatFormatting.YELLOW))
                 .forGoggles(tooltip);
 
-        CreateLang.builder(Cif.MODID).translate("gui.goggles.chemical_cleaner.input").style(ChatFormatting.GREEN).forGoggles(tooltip);
-        CreateLang.fluidName(inputTank.getPrimaryHandler().getFluidInTank(0)).forGoggles(tooltip);
-        CreateLang.text(inputTank.getPrimaryHandler().getFluidInTank(0).getAmount() + "/ " + capacity + "mb").style(ChatFormatting.AQUA).forGoggles(tooltip);
+        Lang.builder(Cif.MODID).translate("gui.goggles.chemical_cleaner.input").style(ChatFormatting.GREEN).forGoggles(tooltip);
+        Lang.fluidName(inputTank.getPrimaryHandler().getFluidInTank(0)).forGoggles(tooltip);
+        Lang.text(inputTank.getPrimaryHandler().getFluidInTank(0).getAmount() + "/ " + capacity + "mb").style(ChatFormatting.AQUA).forGoggles(tooltip);
 
-        CreateLang.builder(Cif.MODID).translate("gui.goggles.chemical_cleaner.output").style(ChatFormatting.RED).forGoggles(tooltip);
-        CreateLang.fluidName(outputTank.getPrimaryHandler().getFluidInTank(0)).forGoggles(tooltip);
-        CreateLang.text(outputTank.getPrimaryHandler().getFluidInTank(0).getAmount() + "/ " + capacity + "mb").style(ChatFormatting.AQUA).forGoggles(tooltip);
+        Lang.builder(Cif.MODID).translate("gui.goggles.chemical_cleaner.output").style(ChatFormatting.RED).forGoggles(tooltip);
+        Lang.fluidName(outputTank.getPrimaryHandler().getFluidInTank(0)).forGoggles(tooltip);
+        Lang.text(outputTank.getPrimaryHandler().getFluidInTank(0).getAmount() + "/ " + capacity + "mb").style(ChatFormatting.AQUA).forGoggles(tooltip);
 
         return isPlayerSneaking;
     }
@@ -196,7 +196,9 @@ public class ChemicalCleanerEntity extends SmartBlockEntity implements IHaveGogg
 
     private void updateCurrent(){
         current = itemHandler.getStackInSlot(0).copy();
-        notifyUpdate();
+        if (!level.isClientSide) {
+            sendData();
+        }
     }
 
 }
