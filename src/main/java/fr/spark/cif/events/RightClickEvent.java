@@ -30,6 +30,8 @@ public class RightClickEvent {
 
         BlockEntity blockEntity = level.getBlockEntity(pos);
 
+        if (level.isClientSide()) return;
+
         if (blockEntity instanceof FurnaceEntity furnaceEntity) {
 
             furnace_block(event, furnaceEntity, blockEntity, player, level, pos);
@@ -101,6 +103,9 @@ public class RightClickEvent {
                     furnaceEntity.debugMod = 1;
                 }
 
+                furnaceEntity.setChanged();
+                furnaceEntity.sendData();
+
             }
         }
     }
@@ -120,6 +125,9 @@ public class RightClickEvent {
                     fluidPortEntity.block_Type = FluidPortEntity.FUEL_TYPE;
                     fluidPortEntity.autoriseFluid();
                 }
+
+                fluidPortEntity.setChanged();
+                fluidPortEntity.sendData();
             }
         }
     }
@@ -161,6 +169,9 @@ public class RightClickEvent {
     private static void control_panel(ControlPanelEntity controlPanelEntity, Player player){
         if (player.getItemInHand(InteractionHand.MAIN_HAND).getItem() == ForgeRegistries.ITEMS.getValue(Create.asResource("wrench"))) {
             controlPanelEntity.switchView();
+
+            controlPanelEntity.setChanged();
+            controlPanelEntity.sendData();
         }
     }
 }
