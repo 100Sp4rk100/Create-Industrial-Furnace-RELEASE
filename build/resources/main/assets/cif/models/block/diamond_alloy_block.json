@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "cif:block/diamond_alloy_block"
-  }
-}

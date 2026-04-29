@@ -196,7 +196,9 @@ public class ChemicalCleanerEntity extends SmartBlockEntity implements IHaveGogg
 
     private void updateCurrent(){
         current = itemHandler.getStackInSlot(0).copy();
-        notifyUpdate();
+        if (!level.isClientSide) {
+            sendData();
+        }
     }
 
 }

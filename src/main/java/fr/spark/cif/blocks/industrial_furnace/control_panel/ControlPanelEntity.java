@@ -1,9 +1,15 @@
 package fr.spark.cif.blocks.industrial_furnace.control_panel;
 
+import com.simibubi.create.api.equipment.goggles.IHaveGoggleInformation;
 import com.simibubi.create.foundation.blockEntity.SmartBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
+import com.simibubi.create.foundation.utility.CreateLang;
+import fr.spark.cif.Cif;
+import fr.spark.cif.blocks.industrial_furnace.controller.ControllerEntity;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -13,7 +19,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ControlPanelEntity extends SmartBlockEntity {
+public class ControlPanelEntity extends SmartBlockEntity implements IHaveGoggleInformation {
 
     private int VIEW;
     public ItemStack SLOT1;
@@ -100,5 +106,41 @@ public class ControlPanelEntity extends SmartBlockEntity {
     protected void read(CompoundTag compound, boolean clientPacket) {
         super.read(compound, clientPacket);
         VIEW = compound.getInt("view");
+    }
+
+    @Override
+    public boolean addToGoggleTooltip(List<Component> tooltip, boolean isPlayerSneaking) {
+        if (level == null){
+            return isPlayerSneaking;
+        }
+
+        CreateLang.builder(Cif.MODID)
+                .translate("gui.goggles.control_panel.mod_txt")
+                .style(ChatFormatting.GREEN)
+                .forGoggles(tooltip);
+
+        if (VIEW == 1) {
+
+            CreateLang.builder(Cif.MODID)
+                    .translate("gui.goggles.control_panel.mod_input")
+                    .style(ChatFormatting.BLUE)
+                    .forGoggles(tooltip);
+        } else if (VIEW == 2) {
+
+            CreateLang.builder(Cif.MODID)
+                    .translate("gui.goggles.control_panel.mod_output")
+                    .style(ChatFormatting.BLUE)
+                    .forGoggles(tooltip);
+
+        }else {
+
+            CreateLang.builder(Cif.MODID)
+                    .translate("gui.goggles.control_panel.mod_nothing")
+                    .style(ChatFormatting.RED)
+                    .forGoggles(tooltip);
+
+        }
+
+        return isPlayerSneaking;
     }
 }
