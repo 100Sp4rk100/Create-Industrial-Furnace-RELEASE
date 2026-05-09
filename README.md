@@ -1,4 +1,6 @@
-To download the mod use the [dowload link](https://www.curseforge.com/minecraft/mc-mods/create-industrial-furnace).
+To download the mod use the dowload link :
+- [Curse Forge](https://www.curseforge.com/minecraft/mc-mods/create-industrial-furnace)
+- [Modrinth](https://modrinth.com/project/sdlFcX8s)
 
 # Add an industrial furnace to Minecraft !
 
@@ -17,7 +19,8 @@ To download the mod use the [dowload link](https://www.curseforge.com/minecraft/
 *   En/Fr ;
 *   Compatible with Create 6.0  and 5.0;
 
-[![Mod Showcase](https://img.youtube.com/vi/1AfxniJ2PO4/0.jpg)](https://www.youtube.com/watch?v=1AfxniJ2PO4)
+Clic on the image to open video :  
+[![Mod Showcase](https://img.youtube.com/vi/1AfxniJ2PO4/0.jpg)](https://www.youtube.com/watch?v=1AfxniJ2PO4)  
 
 ## __**Blocs :**__
 
@@ -56,13 +59,15 @@ To download the mod use the [dowload link](https://www.curseforge.com/minecraft/
 }
 ```
 
-## __**Videos :**__
+## __**Videos :**__  
 
-__**Mod Showcase :**__
-[![Mod Showcase](https://img.youtube.com/vi/1AfxniJ2PO4/0.jpg)](https://www.youtube.com/watch?v=1AfxniJ2PO4)
+__**Mod Showcase :**__  
+Clic on the image to open video :  
+[![Mod Showcase](https://img.youtube.com/vi/1AfxniJ2PO4/0.jpg)](https://www.youtube.com/watch?v=1AfxniJ2PO4)  
 
-__**Ponder Showcase :**__
+__**Ponder Showcase :**__  
+Clic on the image to open video :  
+[![Ponder Showcase 1](https://img.youtube.com/vi/wD-W1Rmdfi4/0.jpg)](https://www.youtube.com/watch?v=wD-W1Rmdfi4)  
 
-[![Ponder Showcase 1](https://img.youtube.com/vi/wD-W1Rmdfi4/0.jpg)](https://www.youtube.com/watch?v=wD-W1Rmdfi4)
-
-[![Ponder Showcase 2](https://img.youtube.com/vi/kc0r3j3qz3o/0.jpg)](https://www.youtube.com/watch?v=kc0r3j3qz3o)
+Clic on the image to open video :  
+[![Ponder Showcase 2](https://img.youtube.com/vi/kc0r3j3qz3o/0.jpg)](https://www.youtube.com/watch?v=kc0r3j3qz3o)  
